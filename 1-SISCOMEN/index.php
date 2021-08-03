@@ -1,3 +1,13 @@
+<?php
+    require('./functions/connection.php');
+
+    $errors = array();
+
+    $sql = "SELECT * FROM comentarios";
+    $resultado = $mysqli -> query($sql);
+
+    //var_dump($resultado);
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -16,22 +26,40 @@
     <div class="contenedor">
         <div class="comentarios">
             <h2>Sistema de Comentarios</h2>
-          
-
+            <?php
+                if($resultado){
+                    if($resultado -> num_rows > 0){
+                        while($fila = $resultado -> fetch_assoc()){ 
+            ?>
             <div class="comentario">
-                  <p><span>Autor:</span>Marvin Torrez</p>
-                  <p><span>Calificacion:</span>5</p>
-                  <p><span>Fecha:</span>2021-07-30 14:38:30</p>
-                  <p><span>Comentario:</span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores amet tempora, ex repellendus pariatur molestias vero ut quasi accusantium vitae itaque non quisquam libero quod debitis totam doloremque odio!</p>
+                  <p><span>Autor: </span> <?php echo $fila['nombre'];?> </p>
+                  <p><span>Calificacion: </span><?php echo $fila['calificacion'];?></p>
+                  <p><span>Fecha: </span><?php echo $fila['fecha'];?></p>
+                  <p><span>Comentario: </span><?php echo $fila['comentario'];?></p>
                     <div class="acciones">
-                        <a href=""><button class="borrar"><i class="fas fa-trash"></i> Borrar</button></a>
-                        <a href=""><button class="editar"><i class="fas fa-edit"></i> Editar   </button></a>
+                        <a href="./eliminar/borrar.php?id=<?php echo $fila['id'] ?>"><button class="borrar"><i class="fas fa-trash"></i> Borrar</button></a>
+                        <a href="./editar/editar.php?id=<?php echo $fila['id'] ?>"><button class="editar"><i class="fas fa-edit"></i> Editar   </button></a>
                         <!--Establece clases a los botones al primero borrar y al segundo editar-->
                     </div>
+            </div>
+            <?php
+                        }
+                    }else{
+                        $errors[] = "No hay ningun comentario";
+                    }
+                } else{
+                    $errors[] = "Hubo un error en la consulta";
+                } 
+                
+                if(count($errors) > 0){
+                    echo "<div class='error'>";
 
-            </div>  
-           
-
+                    foreach($errors as $error){
+                        echo "<i class='fas fa-exclamation-circle'></i>".$error."<br>";
+                    }
+                    echo "</div>";
+                }
+            ?>
         </div>
     </div>
     <div class="btn-add">
