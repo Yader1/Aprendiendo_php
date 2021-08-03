@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insertar usuarios</title>
+	<link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+	<div class="formulario">
+		<div class="alinear">
+			<ul class="options">
+				<li class="option">
+					<a href="../menu.html">
+						<img src="../img/hacia-atras.png" width="50" height="50"><br>
+					</a>
+				</li>
+				<li>
+					<h1 class="titulo">Insertar usuario</h1>
+				</li>
+			</ul>
+		</div>
+		<form class="formu" action="insertar.php" method="post">
+			<div>
+				<label class="etiqueta" for="nombre">Nombre del estudiante:</label><br>
+				<input class="text" type="text" name="nombre" placeholder="Ingrece nombre y apellido" size="50" required>
+				<br>
+				<label class="etiqueta" for="mail">Usuario:</label><br>
+				<input class="text" type="text" name="usuario" placeholder="Ingrece un usuario" size="50" required>
+				<br>
+				<label class="etiqueta" for="mail">Contraseña:</label><br>
+				<input class="text" type="password" name="password" placeholder="Contraseña" size="50" required>
+				<br>
+				<input class="btn" type="submit" value="registrar" name="btnregistrar">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

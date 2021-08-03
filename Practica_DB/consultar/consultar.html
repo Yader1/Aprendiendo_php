@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Consultar datos</title>
+	<link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+<body>
+	<div class="formulario">
+		<div>
+			<ul class="options">
+				<li class="option">
+					<a href="../menu.html">
+						<img src="../img/hacia-atras.png" width="50" height="50"><br>
+					</a>
+				</li>
+				<li>
+					<h1 class="titulo">Consultar usuarios</h1>
+				</li>
+			</ul>
+		</div>
+		<form class="formu" action="consultar.php" method="post">
+			<div>
+				<label class="etiqueta" for="correo">Ingrece su usuario</label><br>
+				<div class="op">
+				<input class="text" type="text" name="usuario" size="50"><br>
+				</div>
+				<input class="btn"  type="submit" value="Consultar" name="btnconsultar">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

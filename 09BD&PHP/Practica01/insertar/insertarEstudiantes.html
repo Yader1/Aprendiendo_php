@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Agregar Estudiante</title>
+	<link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+	<div class="formulario">
+		<h1 class="titulo">Alta de estudiantes</h1>
+		<form action="insertarEstudiante.php" method="post">
+			<label class="etiqueta" for="nombre">Nombre del estudiante:</label>
+			<input class="text" type="text" name="nombre" placeholder="Ingrece nombre y apellido" size="50" required>
+			<br>
+			<label class="etiqueta" for="mail">Email:</label>
+			<input class="text" type="Email" name="mail" placeholder="Ingrece su correo electronico" size="50" required>
+			<br>
+			<label class="etiqueta" for="curso">Seleccione un curso</label>
+			<select class="select-css" name="codcurso">
+				<option value="1">Php</option>
+				<option value="2">JavaScript</option>
+				<option value="3">Java</option>
+			</select>
+			<br>
+			<input class="btn" type="submit" value="registrar" name="btnregistrar">
+		</form>
+	</div>
+</body>
+</html>
