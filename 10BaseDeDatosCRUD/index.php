@@ -19,8 +19,6 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
-
-
 </head>
 <body>
     <div class="contenedor">
@@ -32,10 +30,10 @@
                         while($fila = $resultado -> fetch_assoc()){ 
             ?>
             <div class="comentario">
-                  <p><span>Autor: </span> <?php echo $fila['nombre'];?> </p>
-                  <p><span>Calificacion: </span><?php echo $fila['calificacion'];?></p>
-                  <p><span>Fecha: </span><?php echo $fila['fecha'];?></p>
-                  <p><span>Comentario: </span><?php echo $fila['comentario'];?></p>
+                  <p><span>Autor: </span> <?php echo htmlspecialchars($fila['nombre']);?> </p>
+                  <p><span>Calificacion: </span><?php echo htmlspecialchars($fila['calificacion']);?></p>
+                  <p><span>Fecha: </span><?php echo htmlspecialchars($fila['fecha']);?></p>
+                  <p><span>Comentario: </span><?php echo htmlspecialchars($fila['comentario']);?></p>
                     <div class="acciones">
                         <a href="./eliminar/borrar.php?id=<?php echo $fila['id'] ?>"><button class="borrar"><i class="fas fa-trash"></i> Borrar</button></a>
                         <a href="./editar/editar.php?id=<?php echo $fila['id'] ?>"><button class="editar"><i class="fas fa-edit"></i> Editar   </button></a>
@@ -63,8 +61,7 @@
         </div>
     </div>
     <div class="btn-add">
-        <a href=""><i class="fas fa-plus-circle"></i></a>
+        <a href="./insertar/insertar.php"><i class="fas fa-plus-circle"></i></a>
     </div>
-   
 </body>
 </html>

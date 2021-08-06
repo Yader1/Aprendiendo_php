@@ -37,6 +37,11 @@ h2{
     font-weight: bold;    
 }
 
+.comentario .comentario .cocalificacion{
+    padding: 10px;
+    margin-left: 5px;
+}
+
 .comentarios .comentario .acciones{
     padding: 10px 0;
     text-align: right;
@@ -60,6 +65,8 @@ h2{
 
 .comentarios .comentario .borrar{
     background: #f54040;
+    border: none;
+    border-radius: 3px;
 }
 
 .comentarios .comentario .editar{
@@ -83,4 +90,58 @@ h2{
 span{
     color: blue;
     font-weight: bold;
+}
+
+/**Estilos para mensajes de correctos y errores*/
+.error{
+    background: #fe6969;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+}
+.success{
+    background: #1FD660;
+    padding: 20px;
+    margin: 20px;
+    color: #fff;
+}
+
+/*Estilo de formulario*/
+.formulario{
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.formulario input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px;
+    border: 1px solid #CBCBCB;
+}
+.formulario textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px;
+    border: 1px solid #CBCBCB;
+}
+.formulario label{
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+}
+.formulario input[type=radio]{
+    margin: 0 15px 0 15px;
+}
+.formulario input[type=submit]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 2px;
+    border:none;
+    background: #1FD660;
+    color: #fff;
+    transition: all .3s ease;
+}
+.formulario input[type=submit]:hover{
+    transform: scale(1,1);
 }
