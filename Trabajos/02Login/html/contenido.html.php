@@ -12,6 +12,8 @@
 <body>
     <div class="contenedor">
         <h1 class="titulo">Contenido del sitio</h1>
+        <a href="closes.php">Cerrar Sesion</a>
+        <hr class="border">
         <div class="contenido">
             <article>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos minima ut numquam corrupti 
