@@ -1,8 +1,6 @@
 <?php
-    session_start();
-    if(isset($_SESSION['usuario'])){
-        header('Location: ../index.php');
-    }
+    require('./iniciarSessiones.php');
+    comprobar_session();
 
     //Verificamos si los datos son enviados
     if($_SERVER['REQUEST_METHOD']=='POST'){
@@ -16,6 +14,7 @@
         if(empty($usuario) or empty($password) or empty($password2)){
             $errores .= '<li>Por favor rellena los datos correctamentes</li>';
         }else{
+            //Conectamos a la base de datos
             try{
                 $conexion = new PDO('mysql:host=127.0.0.1;dbname=usuarios_db', 'root', '');
             }catch(PDOException $e){
