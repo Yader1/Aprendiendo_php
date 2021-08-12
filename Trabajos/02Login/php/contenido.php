@@ -1,3 +1,3 @@
 <?php
-    require('../html/connection.php');
+    require('../html/contenido.html.php');
 ?>
