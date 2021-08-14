@@ -9,13 +9,13 @@
 body {
 	font-size: 16px;
 	font-family: 'Raleway', sans-serif;
-	background: #1B1D35;
+	background: #0A0A39;
 	color:#fff;
 }
 
 a {
 	text-decoration: none;
-	color:#B8711B;
+	color:#19D132;
 }
 
 a:hover {
@@ -25,26 +25,29 @@ a:hover {
 .contenedor {
 	max-width: 500px;
 	width: 90%;
-	margin: auto;
+	margin: 120px auto 0 auto;
+	background: #2C2C47;
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.377);
+	
+	border-radius: 2px;
 }
 
 .titulo {
 	font-weight: 300;
-	color: #B8711B;
+	color: #01A818;
 	text-align: center;
 	margin: 60px 0 30px 0;
 }
 
 .border {
 	border:none;
-	margin-bottom: 5px; 
-	border-top:10px solid #B8711B;
+	border-top:10px solid #01A818;
 	background: none;
 	color:none;
 }
 
 .formulario {
-	background: #2C2C47;
+	background: #151C8A;
 	padding: 30px;
 	margin-bottom: 30px;
 }
@@ -115,10 +118,9 @@ a:hover {
 	max-height: 48px;
 	font-size: 18px;
 	line-height: 18px;
-	background: #679863;
+	background: #19D132 ;
 	display: inline-block;
 	color: #fff;
-	background: #769766;
 	cursor: pointer;
 
 	-webkit-border-radius: 0 3px 3px 0;
